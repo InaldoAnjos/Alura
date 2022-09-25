@@ -11,7 +11,7 @@ INSERT INTO aluno (nome,
                    ) 
         
         VALUES ('Inaldo Junior', 
-                '08288157475',
+                '00000000000',
                 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                 33,
                 198.99,
