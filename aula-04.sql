@@ -37,4 +37,34 @@ SELECT * FROM alunos JOIN aluno_curso ON aluno_curso.aluno_id = alunos.id
 
 
 SELECT alunos.nome AS Aluno, cursos.nome AS Curso FROM alunos JOIN aluno_curso ON aluno_curso.aluno_id = alunos.id
-                     JOIN cursos      ON cursos.id            = aluno_curso.curso_id;
+                                                              JOIN cursos      ON cursos.id            = aluno_curso.curso_id;
+
+INSERT INTO alunos (nome, cpf, idade, mensalidade, ativo) VALUES ('Nico Rosberg', '00011122233', 36, 178.90, TRUE);
+
+INSERT INTO cursos (nome) VALUES ('SQL');
+
+   SELECT alunos.id,
+          alunos.nome as "Nome do Aluno", 
+          cursos.nome as "Nome do Curso"
+     FROM alunos
+LEFT JOIN aluno_curso ON aluno_curso.aluno_id = alunos.id
+LEFT JOIN cursos      ON aluno_curso.curso_id = cursos.id
+ ORDER BY 1;
+
+  SELECT alunos.id,
+          alunos.nome as "Nome do Aluno", 
+          cursos.nome as "Nome do Curso"
+     FROM alunos
+RIGHT JOIN aluno_curso ON aluno_curso.aluno_id = alunos.id
+RIGHT JOIN cursos      ON aluno_curso.curso_id = cursos.id
+ ORDER BY 1;
+
+  SELECT alunos.id,
+          alunos.nome as "Nome do Aluno", 
+          cursos.nome as "Nome do Curso"
+     FROM alunos
+FULL JOIN aluno_curso ON aluno_curso.aluno_id = alunos.id
+FULL JOIN cursos      ON aluno_curso.curso_id = cursos.id
+ ORDER BY 1;
+
+ 
